@@ -12,7 +12,7 @@ world.AddArea(1, 0, new BanditCamp { Conflict = new CombatConflict(new BanditLea
 world.AddArea(2, 0, new MountainPass { Conflict = new PuzzleConflict(new Puzzle1()) }); // East +2
 
 Console.WriteLine("Welcome, adventurer!");
-Console.WriteLine("Use W/A/S/D to move North/West/South/East. Type 'quit' to exit.\n");
+Console.WriteLine("Use N/W/S/E to move North, West, South, or East. Type 'QUIT' to exit.\n");
 
 while (player.Health > 0)
 {
@@ -30,19 +30,19 @@ while (player.Health > 0)
         break;
     }
 
-    Console.Write("\nWhere do you want to go (W/A/S/D)? ");
-    string? input = Console.ReadLine()?.Trim().ToLower();
+    Console.Write("\nWhere do you want to go (N/W/S/E)? ");
+    string? input = Console.ReadLine()?.Trim().ToUpper();
 
-    if (input == "quit") break;
+    if (input == "QUIT") break;
 
     switch (input)
     {
-        case "w": player.Y += 1; break;
-        case "s": player.Y -= 1; break;
-        case "a": player.X -= 1; break;
-        case "d": player.X += 1; break;
+        case "N": player.Y += 1; break;
+        case "W": player.Y -= 1; break;
+        case "S": player.X -= 1; break;
+        case "E": player.X += 1; break;
         default:
-            Console.WriteLine("Invalid command. Use W/A/S/D or 'quit'.");
+            Console.WriteLine("Invalid command. Use N/W/S/E or 'QUIT'.");
             break;
     }
 
