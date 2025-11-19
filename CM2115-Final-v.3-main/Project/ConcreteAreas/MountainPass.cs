@@ -1,6 +1,6 @@
-using final.v1.ConcretePuzzles;
+using Project.ConcretePuzzles;
 
-namespace final.v1
+namespace Project
 {
     public class MountainPass : AreaBase
     {

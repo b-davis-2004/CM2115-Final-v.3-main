@@ -1,4 +1,4 @@
-namespace final.v1;
+namespace Project;
 
 public interface IArea
 {

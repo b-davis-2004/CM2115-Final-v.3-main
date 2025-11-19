@@ -1,5 +1,5 @@
-using final.v1;
-using final.v1.ConcretePuzzles;
+using Project;
+using Project.ConcretePuzzles;
 
 Player player = new Player();
 Map world = new Map();

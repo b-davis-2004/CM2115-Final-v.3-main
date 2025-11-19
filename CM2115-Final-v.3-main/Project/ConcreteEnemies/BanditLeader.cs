@@ -1,8 +1,8 @@
-namespace final.v1;
+namespace Project;
 
-public class Dryad : IEnemy
+public class BanditLeader : IEnemy
 {
-    public string Name => "Dryad";
+    public string Name => "Bandit Leader";
     public int Health { get; set; } = 100;
     public int AttackPower => 20;
 
@@ -20,6 +20,7 @@ public class Dryad : IEnemy
         Console.WriteLine($"{Name} takes {damage} damage!");
     }
 }
+
 //Defining specific enemy type with its unique properties and behaviors
 //Will be renamed for actual enemy name later
 //Implements IEnemy interface

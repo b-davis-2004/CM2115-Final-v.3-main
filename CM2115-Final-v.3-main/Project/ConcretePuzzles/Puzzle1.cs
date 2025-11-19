@@ -1,4 +1,4 @@
-namespace final.v1.ConcretePuzzles
+namespace Project.ConcretePuzzles
 {
     public class Puzzle1 : IPuzzle
     {

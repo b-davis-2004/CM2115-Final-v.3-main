@@ -1,8 +1,8 @@
-namespace final.v1;
+namespace Project;
 
 public class PuzzleConflict : IConflict
 {
-    public string Description => $"You are face with a {Puzzle.Name}!";
+    public string Description => $"You are face with a(n) {Puzzle.Name}!";
     public bool IsResolved { get; private set; }
     public IPuzzle Puzzle { get; private set; }
 
