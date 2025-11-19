@@ -1,8 +1,8 @@
 namespace final.v1;
 
-public class Enemy2 : IEnemy
+public class BanditLeader : IEnemy
 {
-    public string Name => "Enemy2";
+    public string Name => "Bandit Leader";
     public int Health { get; set; } = 100;
     public int AttackPower => 20;
 
@@ -10,14 +10,14 @@ public class Enemy2 : IEnemy
 
     public void Attack(Player player)
     {
-        Console.WriteLine($"{Name} does xyz for {AttackPower} damage!");
+        Console.WriteLine($"{Name} attacks for {AttackPower} damage!");
         player.Health -= AttackPower;
     }
 
     public void TakeDamage(int damage)
     {
         Health -= damage;
-        Console.WriteLine($"{Name} does xyz, taking {damage} damage!");
+        Console.WriteLine($"{Name} takes {damage} damage!");
     }
 }
 

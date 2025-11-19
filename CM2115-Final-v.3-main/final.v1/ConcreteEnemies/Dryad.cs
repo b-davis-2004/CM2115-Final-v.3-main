@@ -1,8 +1,8 @@
 namespace final.v1;
 
-public class Enemy1 : IEnemy
+public class Dryad : IEnemy
 {
-    public string Name => "Enemy1";
+    public string Name => "Dryad";
     public int Health { get; set; } = 100;
     public int AttackPower => 20;
 
@@ -10,17 +10,16 @@ public class Enemy1 : IEnemy
 
     public void Attack(Player player)
     {
-        Console.WriteLine($"{Name} does xyz for {AttackPower} damage!");
+        Console.WriteLine($"{Name} attacks for {AttackPower} damage!");
         player.Health -= AttackPower;
     }
 
     public void TakeDamage(int damage)
     {
         Health -= damage;
-        Console.WriteLine($"{Name} does xyz, taking {damage} damage!");
+        Console.WriteLine($"{Name} takes {damage} damage!");
     }
 }
-
 //Defining specific enemy type with its unique properties and behaviors
 //Will be renamed for actual enemy name later
 //Implements IEnemy interface

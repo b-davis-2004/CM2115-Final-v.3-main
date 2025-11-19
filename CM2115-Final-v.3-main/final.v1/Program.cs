@@ -1,4 +1,5 @@
 using final.v1;
+using final.v1.ConcretePuzzles;
 
 Player player = new Player();
 Map world = new Map();
@@ -6,8 +7,9 @@ Map world = new Map();
 // Define map layout
 // Uses Concreate Area and Conflict implementations
 //Might be better to define coordinates outside of main program
-world.AddArea(0, 0, new Area1{ Conflict = new CombatConflict(new Enemy1()) });
-world.AddArea(1, 0, new Area2{ Conflict = new CombatConflict(new Enemy2()) });    // East +1
+world.AddArea(0, 0, new Forest{ Conflict = new CombatConflict(new Dryad()) });
+world.AddArea(1, 0, new BanditCamp { Conflict = new CombatConflict(new BanditLeader()) });    // East +1
+world.AddArea(2, 0, new MountainPass { Conflict = new PuzzleConflict(new Puzzle1()) }); // East +2
 
 Console.WriteLine("Welcome, adventurer!");
 Console.WriteLine("Use W/A/S/D to move North/West/South/East. Type 'quit' to exit.\n");

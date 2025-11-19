@@ -1,13 +1,13 @@
 namespace final.v1
 {
-    public class Area2 : AreaBase
+    public class BanditCamp : AreaBase
     {
         public override string Name => "Bandit Camp";
-        public override string Description => "This is Area 2.";
+        public override string Description => "This is the notorious bandit camp, filled with dangerous outlaws and hidden traps.";
 
-        public Area2()
+        public BanditCamp()
         {
-            Conflict = new CombatConflict(new Enemy2());
+            Conflict = new CombatConflict(new BanditLeader());
         }
     }
 
