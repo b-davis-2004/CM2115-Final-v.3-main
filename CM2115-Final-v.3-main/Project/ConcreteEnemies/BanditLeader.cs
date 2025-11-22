@@ -3,8 +3,8 @@ namespace Project;
 public class BanditLeader : IEnemy
 {
     public string Name => "Bandit Leader";
-    public int Health { get; set; } = 100;
-    public int AttackPower => 20;
+    public int Health { get; set; } = 25;
+    public int AttackPower => 5;
 
     public bool IsDefeated => Health <= 0;
 
@@ -22,7 +22,6 @@ public class BanditLeader : IEnemy
 }
 
 //Defining specific enemy type with its unique properties and behaviors
-//Will be renamed for actual enemy name later
 //Implements IEnemy interface
 //Provides concrete implementations for Attack and TakeDamage methods
 //Includes properties for Name, Health, AttackPower, and IsDefeated status
